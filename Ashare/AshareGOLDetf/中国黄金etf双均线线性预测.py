@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 from datetime import datetime
 
 # 获取黄金ETF的历史行情数据
-etf_data = ak.fund_etf_hist_em(symbol='518880', period='daily', start_date='20130801', end_date='20250808')
+etf_data = ak.fund_etf_hist_em(symbol='518880', period='daily', start_date='20130801', end_date='20250927')
 # 只需要收盘价序列
 Df = etf_data[['收盘']].rename(columns={'收盘':'Close'})
 # 将Index设置为datetime格式的日期
